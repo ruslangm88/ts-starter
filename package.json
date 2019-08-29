@@ -1,0 +1,31 @@
+{
+  "name": "functional-es6",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run clean && npm run lint && tsc",
+    "clean": "rm -rf dist",
+    "start": "node -r dotenv/config ./dist/app.js",
+    "test": "jest --collectCoverage --detectOpenHandles --forceExit",
+    "watch-test": "jest --watch --detectOpenHandles --forceExit",
+    "watch-node": "nodemon -r dotenv/config ./dist/app.js",
+    "watch-ts": "tsc -w",
+    "coverage": "open ./coverage/lcov-report/index.html",
+    "lint": "tslint --fix -c tslint.json 'src/**/*.ts'"
+  },
+  "author": "Rodrigo Muniz <rodrigo.b.muniz@ibm.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^24.0.18",
+    "jest": "^24.9.0",
+    "nodemon": "^1.19.1",
+    "ts-jest": "^24.0.2",
+    "tslint": "^5.19.0",
+    "typescript": "^3.5.3"
+  },
+  "dependencies": {
+    "@types/node": "^12.7.2",
+    "dotenv": "^8.1.0"
+  }
+}
