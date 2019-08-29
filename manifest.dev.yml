@@ -2,5 +2,5 @@ applications:
 - name: wework-dev
   routes:
   - route: wework-dev.mybluemix.net
-  memory: 64M
+  memory: 32M
   instances: 1
